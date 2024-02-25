@@ -2,7 +2,15 @@
 
 data <- read.csv("./osteoporosis.csv")
 
-##### initial data demographic insights #####
+##### initial insights #####
+# number of individuals:
+  nrow(data)
+# number of those with osteoporosis:
+  nrow(data[data$Osteoporosis == 1,])
+# number of those without osteoporosis:
+  nrow(data[data$Osteoporosis == 0,])
+
+##### exploratory data analysis #####
 
 # summary stats of age
   # total cohort 
