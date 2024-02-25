@@ -1,14 +1,13 @@
 # read in data
 
 data <- read.csv("./osteoporosis.csv")
+head(data,5)
+data <- as.data.frame(unclass(data),stringsAsFactors = TRUE)
+
 
 ##### initial insights #####
-# number of individuals:
-  nrow(data)
-# number of those with osteoporosis:
-  nrow(data[data$Osteoporosis == 1,])
-# number of those without osteoporosis:
-  nrow(data[data$Osteoporosis == 0,])
+summary(data)
+  
 
 ##### exploratory data analysis #####
 
@@ -27,3 +26,4 @@ prop.table(table(data$Osteoporosis, data$Gender))
 
 prop.table(table(data$Race.Ethnicity))
 prop.table(table(data$Gender))
+
